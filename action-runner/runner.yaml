@@ -7,7 +7,7 @@ spec:
  replicas: 2
  template:
    spec:
-     repository: action-runner
+     repository: tooling/action-runner/
 ---
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: HorizontalRunnerAutoscaler
