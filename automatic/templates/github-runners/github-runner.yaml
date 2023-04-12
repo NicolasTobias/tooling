@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-    name: github-runner-system
-    namespacep: git
+  name: github-runner-system
+  namespacep: git
 spec:
-    destination:
-        namespace: actions-runner-system
-        server: {{ .Values.spec.destination.server }}
-    project: default
-    source:
-        path: chart/actions-runner-controller/
-        repoURL: https://github.com/actions/actions-runner-controller.git
-        targetRevision: HEAD
+  destination:
+    namespace: actions-runner-system
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: chart/actions-runner-controller/
+    repoURL: https://github.com/actions/actions-runner-controller.git
+    targetRevision: HEAD
